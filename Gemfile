@@ -56,3 +56,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'angular-rails-templates', '1.0.2'
+
+gem 'jwt', '1.5.6'
+gem 'figaro', '1.1.1'
