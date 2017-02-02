@@ -1,14 +1,47 @@
-<div ng-app="testIntegration">
-  <h1>Hi f**king world!!!!</h1>
 
-  <h3>On rails hello world is working fine!!</h3>
+  <div class="col-md-12 container" ng-app='app'>
 
-  <div ng-controller="testAngular">
-    <h3>{{test}}</h3>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="col-md-2"></div>
+
+      <div class="col-md-1 navbar-header">
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="col-md-2 nav navbar-nav">
+          <li class="active"><a href="#">Welcome</a></li>
+          <li><a href="#">Users</a></li>
+        </ul>
+
+        <div class="col-md-3"></div>
+
+        <ul class="col-md-2 nav navbar-nav navbar-left">
+          <li><a href="#">Register</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2"></div>
+    </nav>
+
+    <div class="col-md-2"> </div>
+    <div class="col-md-8">
+
+      <div class="row" id="principal" ng-controller='mc'>
+
+        <div class='main' ng-view>
+
+          <!-- <<<<<<<<<<<<<<<<<<<<<<<< APP MAIN VIEW >>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="col-md-2"> </div>
+
+
   </div>
 
-  <div class="alert alert-success" role="alert">
-    <strong>Well done!</strong> and finally, Bootstrap integration too
-  </div>
-</div>
 

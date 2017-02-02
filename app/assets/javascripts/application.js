@@ -14,5 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require angular
+//= require angular-rails-templates
 //= require angular-ui-router
+//= require angular-route
+//= require ngstorage
+
+//= require_tree ./templates
+
+// Importar primero la clase principal y luego el resto de controladores y servicios
+//= require goindex
 //= require_tree .

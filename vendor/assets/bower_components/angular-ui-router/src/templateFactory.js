@@ -42,7 +42,7 @@ function TemplateFactoryProvider() {
    * @requires $injector
    *
    * @description
-   * Service. Manages loading of templates.
+   * Service. Manages loading of app-templates.
    */
   this.$get = ['$http', '$templateCache', '$injector', function($http, $templateCache, $injector){
     return new TemplateFactory($http, $templateCache, $injector, shouldUnsafelyUseHttp);}];
