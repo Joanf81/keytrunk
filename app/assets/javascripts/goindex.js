@@ -6,12 +6,16 @@ app.config(function ($routeProvider) {
             controller: 'welcomeController',
             templateUrl: 'welcome.template.html'
         })
+        .when('/users/new', {
+            controller: 'UsersNewController',
+            templateUrl: 'users_new.template.html'
+        })
         .otherwise({
             redirectTo: '/'
         });
 });
 
-app.controller('mc', function($rootScope, $location) {
+app.controller('mainController', function($rootScope, $location) {
 
     $rootScope.go = function(url) {
 

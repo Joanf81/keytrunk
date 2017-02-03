@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
   before_action :set_user, only: [:show, :update, :destroy]
   before_action :authorize_request, only: [:show, :update, :destroy] # Check auth token before actions
 
@@ -21,17 +22,18 @@ class Api::V1::UsersController < ApplicationController
 
   # POST /users
   def create
-    @users = User.new(user_params)
+    @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
+        format.all {render json: @user, status: :created}
         #format.html { redirect_to @user, notice: 'Prueba was successfully created.' }
-        format.all { render :show, status: :created, location: @user }
-        format.xml { render :show, status: :created, location: @user }
+        #format.all { render :show, status: :created, location: @user }
+        #format.xml { render :show, status: :created, location: @user }
       else
         #format.html { render :new }
-        format.all { render json: @user.errors, status: :unprocessable_entity }
-        format.xml { render json: @user.errors, status: :unprocessable_entity }
+        #format.all { render json: @user.errors, status: :unprocessable_entity }
+        #format.xml { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
