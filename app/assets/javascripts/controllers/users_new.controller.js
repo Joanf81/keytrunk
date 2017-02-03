@@ -16,7 +16,7 @@ app.controller('UsersNewController', function($scope, usersService) {
             },
             // Error:
             function() {
-                alert('Error creating user');
+                alert('Error creating new user');
             });
     };
 

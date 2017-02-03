@@ -6,6 +6,10 @@ app.config(function ($routeProvider) {
             controller: 'welcomeController',
             templateUrl: 'welcome.template.html'
         })
+        .when('/users', {
+            controller: 'UsersIndexController',
+            templateUrl: 'users_index.template.html'
+        })
         .when('/users/new', {
             controller: 'UsersNewController',
             templateUrl: 'users_new.template.html'
