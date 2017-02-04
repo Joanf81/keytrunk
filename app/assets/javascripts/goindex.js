@@ -10,6 +10,10 @@ app.config(function ($routeProvider) {
             controller: 'UsersIndexController',
             templateUrl: 'users_index.template.html'
         })
+        .when('/users/:idUser', {
+            controller: 'UsersShowController',
+            templateUrl: 'users_show.template.html'
+        })
         .when('/users/new', {
             controller: 'UsersNewController',
             templateUrl: 'users_new.template.html'

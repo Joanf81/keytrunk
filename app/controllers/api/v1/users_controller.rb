@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
 
   skip_before_action :verify_authenticity_token
   before_action :set_user, only: [:show, :update, :destroy]
-  before_action :authorize_request, only: [:show, :update, :destroy] # Check auth token before actions
+  before_action :authorize_request, only: [:update, :destroy] # Check auth token before actions
 
   # GET /users
   def index
